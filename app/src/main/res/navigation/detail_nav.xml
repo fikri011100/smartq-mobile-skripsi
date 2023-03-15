@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_nav"
+    app:startDestination="@id/detailKategori">
+
+    <fragment
+        android:id="@+id/detailKategori"
+        android:name="com.smartqid.smartq.revamp.ui.category.DetailKategoriFragment"
+        android:label="fragment_detail_kategori"
+        tools:layout="@layout/fragment_detail_kategori" >
+        <action
+            android:id="@+id/action_detailKategori_to_main_nav"
+            app:destination="@id/main_nav" />
+
+        <action
+            android:id="@+id/action_detailKategori_to_tokoFragment"
+            app:destination="@id/tokoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tokoFragment"
+        android:name="com.smartqid.smartq.revamp.ui.merchant.MerchantFragment"
+        android:label="fragment_toko"
+        tools:layout="@layout/fragment_merchant" >
+        <action
+            android:id="@+id/action_tokoFragment_to_listMenuFragment"
+            app:destination="@id/listMenuFragment" />
+        <action
+            android:id="@+id/action_tokoFragment_to_doneAntrianFragment"
+            app:destination="@id/doneAntrianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMenuFragment"
+        android:name="com.smartqid.smartq.revamp.ui.merchant.ListMenuFragment"
+        android:label="fragment_list_menu"
+        tools:layout="@layout/fragment_list_menu" />
+    <fragment
+        android:id="@+id/doneAntrianFragment"
+        android:name="com.smartqid.smartq.revamp.ui.merchant.DoneFragment"
+        android:label="fragment_done_antrian"
+        tools:layout="@layout/fragment_done" />
+
+</navigation>

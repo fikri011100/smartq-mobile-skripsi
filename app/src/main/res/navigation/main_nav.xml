@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/Home">
+
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.smartqid.smartq.revamp.ui.home.beranda.HomeFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_main_nav_to_detailKategori"
+            app:destination="@id/detail_nav"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/Home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <include app:graph="@navigation/detail_nav" />
+
+    <fragment
+        android:id="@+id/Antrian"
+        android:name="com.smartqid.smartq.revamp.ui.home.history.AntrianFragment"
+        android:label="fragment_antrian"
+        tools:layout="@layout/fragment_antrian" >
+        <action
+            android:id="@+id/action_Riwayat_to_DetailAnterian"
+            app:destination="@id/DetailAnterian"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/Antrian"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailAnterian"
+        android:name="com.smartqid.smartq.revamp.ui.queue.DetailAnterianFragment"
+        android:label="fragment_detail_anterian"
+        tools:layout="@layout/fragment_detail_anterian" />
+    <fragment
+        android:id="@+id/Profile"
+        android:name="com.smartqid.smartq.revamp.ui.home.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/Voucher"
+        android:name="com.smartqid.smartq.revamp.ui.home.favorite.VoucherFragment"
+        android:label="fragment_voucher"
+        tools:layout="@layout/fragment_voucher" >
+        <action
+            android:id="@+id/action_Voucher_to_merchantFragment"
+            app:destination="@id/merchantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantFragment"
+        android:name="com.smartqid.smartq.revamp.ui.merchant.MerchantFragment"
+        android:label="fragment_merchant"
+        tools:layout="@layout/fragment_merchant" />
+</navigation>

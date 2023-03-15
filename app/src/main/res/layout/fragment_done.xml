@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_second"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".revamp.ui.merchant.DoneFragment">
+
+    <TextView
+        android:id="@+id/text_done_antrian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="Terima Kasih Antrian kamu sedang kami proses"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_done_antrian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/image_done_antrian"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_done_antrian" />
+
+    <TextView
+        android:id="@+id/text_desc_antrian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/urbanist_medium"
+        android:text="Harap tunggu sebentar ya kami akan konfirmasi nomor antrian kamu"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_done_antrian" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="50sp"
+        android:background="@drawable/bg_white_rounded"
+        android:fontFamily="@font/urbanist_bold"
+        android:paddingVertical="16dp"
+        android:text="Lihat Antrian"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_second"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_desc_antrian" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

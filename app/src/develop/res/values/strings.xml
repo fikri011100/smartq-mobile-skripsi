@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartQ Dev</string>
+    <string name="server_client_id">21602646668-vvtl68m0d7i2o7i4vlk3nqkq56fugd9s.apps.googleusercontent.com</string>
+
+    <string name="text_under_construction">Supaya fitur ini sempurna, Kami harus membangun dalam beberapa pekan</string>
+
+    <string-array name="arr_category">
+        <item>Potong</item>
+        <item>Creambath</item>
+        <item>Bleeching</item>
+    </string-array>
+
+    <string-array name="arr_gender">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string name="best_deals_desc">Dapetin diskon dan harga spesial di SmartQ sekarang sebelum kehabisan</string>
+</resources>

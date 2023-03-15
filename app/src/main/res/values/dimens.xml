@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp16">4dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp4">8dp</dimen>
+
+    <dimen name="dialog_width">327dp</dimen>
+    <dimen name="dialog_height">321dp</dimen>
+    <dimen name="dialog_height2">250dp</dimen>
+
+    <dimen name="kat_first">4dp</dimen>
+</resources>

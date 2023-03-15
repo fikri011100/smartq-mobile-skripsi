@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_nav"
+    app:startDestination="@id/homeSettingFragment">
+
+    <fragment
+        android:id="@+id/homeSettingFragment"
+        android:name="com.smartqid.smartq.ui.settings.HomeSettingFragment"
+        android:label="fragment_home_setting"
+        tools:layout="@layout/fragment_home_setting" >
+        <action
+            android:id="@+id/action_homeSettingFragment_to_userSettingName"
+            app:destination="@id/userSettingFragment" />
+        <action
+            android:id="@+id/action_homeSettingFragment_to_themeSettingFragment"
+            app:destination="@id/themeSettingFragment" />
+
+        <action
+            android:id="@+id/action_homeSettingFragment_to_privacyPolicy"
+            app:destination="@id/privacyPolicyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.smartqid.smartq.ui.settings.ThemeSettingFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/themeSettingFragment"
+        android:name="com.smartqid.smartq.ui.settings.ThemeSettingFragment"
+        android:label="fragment_theme_setting"
+        tools:layout="@layout/fragment_theme_setting" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userSettingFragment"
+        android:name="com.smartqid.smartq.ui.settings.UserSettingFragment"
+        android:label="fragment_user_setting"
+        tools:layout="@layout/fragment_user_setting" >
+        <action
+            android:id="@+id/action_userSettingFragment_to_homeSettingFragment"
+            app:destination="@id/homeSettingFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:id="@+id/card_toko"
+    android:background="@drawable/bg_white_rounded"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/foto_toko"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@color/soft_blue"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/namaToko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="Potong Rambut "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/foto_toko"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_location"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintLeft_toRightOf="@+id/foto_toko"
+            app:layout_constraintTop_toBottomOf="@+id/namaToko" />
+
+        <TextView
+            android:id="@+id/nama_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4sp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="Potong Rambut "
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAlignment="textStart"
+            android:textColor="@color/grey_darker"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="16dp"
+            app:layout_constraintStart_toEndOf="@+id/image_location"
+            app:layout_constraintTop_toTopOf="@id/image_location" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_grey"
+            app:layout_constraintLeft_toRightOf="@+id/foto_toko"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nama_location" />
+
+        <ImageView
+            android:id="@+id/image_rating"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_support"
+            app:layout_constraintLeft_toRightOf="@+id/foto_toko"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/text_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4sp"
+            android:fontFamily="@font/urbanist_medium"
+            android:text="4.8"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/image_location"
+            app:layout_constraintTop_toTopOf="@id/image_rating" />
+
+        <TextView
+            android:id="@+id/text_total_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4sp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="(182)"
+            android:textAlignment="center"
+            android:textColor="@color/grey_darker"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/text_rating"
+            app:layout_constraintTop_toTopOf="@id/image_rating" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

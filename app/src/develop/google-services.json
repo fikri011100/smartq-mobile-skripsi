@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "21602646668",
+    "firebase_url": "https://dev-smartq-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dev-smartq",
+    "storage_bucket": "dev-smartq.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21602646668:android:5d782b4339d281f254d9a9",
+        "android_client_info": {
+          "package_name": "com.smartqid.smartq.develop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21602646668-vvtl68m0d7i2o7i4vlk3nqkq56fugd9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2iSzJ3vYh7xv-SruKXLoiXxoCPNAPv_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21602646668-vvtl68m0d7i2o7i4vlk3nqkq56fugd9s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

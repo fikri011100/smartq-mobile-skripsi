@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".revamp.ui.merchant.MerchantFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomChard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_toko"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="32dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/example_foto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_toolbar"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize5Percent" />
+
+            <ImageView
+                android:id="@+id/image_back_toko"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/image_toko"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/image_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_love_black"
+                app:layout_constraintEnd_toEndOf="@id/image_toko"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_toolbar"
+                style="@style/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:maxLines="2"
+                android:text="Details"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_nama_toko"
+                style="@style/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:maxLines="2"
+                android:text="Nama Toko"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="@id/image_toko"
+                app:layout_constraintStart_toStartOf="@id/image_toko"
+                app:layout_constraintTop_toBottomOf="@+id/image_toko" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/keterangan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_nama_toko"
+                app:layout_constraintTop_toBottomOf="@+id/text_nama_toko">
+
+                <ImageView
+                    android:id="@+id/alamat"
+                    style="@style/textView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/detailData"
+                    style="@style/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:textColor="@color/blue_second"
+                    android:textAlignment="textStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/alamat"
+                    app:layout_constraintTop_toTopOf="@+id/alamat" />
+
+                <ImageView
+                    android:id="@+id/kota"
+                    style="@style/textView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailData"
+                    app:tint="@color/blue_second" />
+
+                <TextView
+                    android:id="@+id/detailKota"
+                    style="@style/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/urbanist_regular"
+                    android:textColor="@color/blue_second"
+                    app:layout_constraintBottom_toBottomOf="@+id/kota"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/kota"
+                    app:layout_constraintTop_toTopOf="@+id/kota" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_list_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="24dp"
+                android:background="@drawable/bg_grey_rounded"
+                app:layout_constraintTop_toBottomOf="@+id/keterangan">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ic_image_list"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_margin="16dp"
+                    android:background="@color/blue_second"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ic_image_list_tag"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@color/blue_second"
+                    android:src="@drawable/ic_tag"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+                    app:layout_constraintBottom_toBottomOf="@id/ic_image_list"
+                    app:layout_constraintStart_toStartOf="@id/ic_image_list"
+                    app:layout_constraintTop_toTopOf="@id/ic_image_list"
+                    app:layout_constraintEnd_toEndOf="@id/ic_image_list"/>
+
+                <TextView
+                    android:id="@+id/text_list_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/urbanist_bold"
+                    android:text="Voucher"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/ic_image_list"
+                    app:layout_constraintTop_toTopOf="@+id/ic_image_list" />
+
+                <TextView
+                    android:id="@+id/text_desc_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/urbanist_medium"
+                    android:text="Pilih Voucher"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintLeft_toRightOf="@+id/ic_image_list"
+                    app:layout_constraintTop_toBottomOf="@+id/text_list_price" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Tentang Kami"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/text_nama_toko"
+                app:layout_constraintTop_toBottomOf="@+id/cons_list_price" />
+
+            <TextView
+                android:id="@+id/text_desc"
+                style="@style/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/urbanist_regular"
+                android:text="@string/loremipsum"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/keterangan"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Hubungi Kami"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/text_desc"
+                app:layout_constraintTop_toBottomOf="@+id/text_desc" />
+
+            <LinearLayout
+                android:id="@+id/cons_wa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="?selectableItemBackground"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                <ImageView
+                    android:id="@+id/imageWA"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_whatsapp" />
+
+                <ImageView
+                    android:id="@+id/imageInstagram"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_instagram" />
+
+                <ImageView
+                    android:id="@+id/imageFacebook"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_facebook" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomChard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="25dp">
+
+            <TextView
+                style="@style/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Mengantri sekarang ?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_mulai_antri"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue_main"
+                android:fontFamily="@font/urbanist_bold"
+                android:paddingHorizontal="40dp"
+                android:text="Ambil Antrian"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

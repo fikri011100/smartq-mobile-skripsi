@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.smartqid.smartq.revamp.ui.auth.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_startedFragment"
+            app:destination="@id/startedFragment"
+            app:popUpTo="@id/startedFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_main_nav"
+            app:destination="@id/main_nav"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startedFragment"
+        android:name="com.smartqid.smartq.revamp.ui.auth.StartedFragment"
+        android:label="fragment_started"
+        tools:layout="@layout/fragment_started" >
+        <action
+            android:id="@+id/action_startedFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_startedFragment_to_signUp"
+            app:destination="@id/signUp"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_startedFragment_to_main_nav"
+            app:destination="@id/main_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.smartqid.smartq.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_startedFragment"
+            app:destination="@id/startedFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_main_nav"
+            app:destination="@id/main_nav"
+            app:popUpTo="@id/main_nav"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.smartqid.smartq.ui.login.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_startedFragment"
+            app:destination="@id/startedFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_signUp_to_main_nav"
+            app:destination="@id/main_nav"
+            app:popUpTo="@id/signUp"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <include app:graph="@navigation/main_nav" />
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.smartqid.smartq.revamp.ui.auth.intro.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_secondIntroFragment"
+            app:destination="@id/secondIntroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondIntroFragment"
+        android:name="com.smartqid.smartq.revamp.ui.auth.intro.SecondIntroFragment"
+        android:label="fragment_second_intro"
+        tools:layout="@layout/fragment_second_intro" >
+        <action
+            android:id="@+id/action_secondIntroFragment_to_startedFragment"
+            app:destination="@id/startedFragment" />
+    </fragment>
+</navigation>

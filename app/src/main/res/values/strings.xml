@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SmartQ</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="facebook_app_id">3799249673496912</string>-->
+    <!--    <string name="fb_login_protocol_scheme">fb3799249673496912</string>-->
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="server_client_id">720623481044-elnsvclf2gsorr7b0hr1379o18uqervv.apps.googleusercontent.com</string>
+    <string name="greating">Silahkan Masuk atau daftar untuk memulai aplikasi</string>
+    <string name="masuk">Masuk</string>
+    <string name="loremipsum"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In risus nunc etiam velit bibendum tincidunt in. Suspendisse tellus nullam nunc non amet lectus. Consequat, commodo, pretium nibh hendrerit. Sit fringilla tellus sit ultrices etiam fringilla cursus sit egestas.</string>
+    <string name="batal_option1">Saya memesan berlebihan</string>
+    <string name="batal_option2">Saya ada keperluan mendadak</string>
+    <string name="batal_option3">Alasan lain :</string>
+    <string name="text_under_construction">Supaya fitur ini sempurna, Kami harus membangun dalam beberapa pekan</string>
+    <string name="best_deals_desc">Dapetin diskon dan harga spesial di SmartQ sekarang sebelum kehabisan</string>
+
+    <string-array name="arr_category">
+        <item>Potong</item>
+        <item>Creambath</item>
+        <item>Bleeching</item>
+    </string-array>
+
+    <string-array name="arr_gender">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
